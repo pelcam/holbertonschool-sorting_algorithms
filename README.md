@@ -1,1 +1,1 @@
-# holbertonschool-sorting_algorithms
+Learning about sorting algorithms with Holberton School
