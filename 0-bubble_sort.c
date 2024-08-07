@@ -18,7 +18,7 @@ void bubble_sort(int *array, size_t size)
 
 	while (j + 1 <= size - 1)
 	{
-		if (array[j] < array[j + 1])
+		if (array[j] <= array[j + 1])
 			j++;
 		else
 		{
@@ -42,7 +42,7 @@ void invert_array(int *array, size_t size)
 
 	while (i + 1 <= size - 1)
 	{
-		if (array[i] < array[i + 1])
+		if (array[i] <= array[i + 1])
 			i++;
 		else
 		{
