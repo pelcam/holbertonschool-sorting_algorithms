@@ -8,6 +8,7 @@
 
 void insertion_sort_list(listint_t **list)
 {
+<<<<<<< HEAD
 	listint_t *current;
 	listint_t *tmp;
 
@@ -45,3 +46,5 @@ void insertion_sort_list(listint_t **list)
 		current = current->next;
 	}
 }
+=======
+>>>>>>> 7fa35907f0962bd95a000eca4a7ed86199bde0ad
