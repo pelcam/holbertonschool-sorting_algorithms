@@ -1,14 +1,14 @@
 #include "sort.h"
 
 /**
-*lomuto_tri - sort 
+*lomuto_tri - sort
 * @array: array to sort
 * @size: size of the array to sort
 * @low: first part of the array separated by pivot
 * @high: second part of the array separated by pivot
-* Return: 
+* Return:
 */
-int lomuto_tri(int *array, size_t size, int low, int high)
+int lomuto_tri(int *array, int low, int high, size_t size)
 {
 	int pivot = array[high];
 	int j, temp;
@@ -45,13 +45,14 @@ int lomuto_tri(int *array, size_t size, int low, int high)
 /**
 * quick_sort_recursive -
 */
-void quick_sort_recursive(int *array, size_t size, int low, int high)
+void quick_sort_recursive(int *array, int low, int high, size_t size)
 {
 	if (low < high)
 	{
-		int i = lomuto_tri(array, size, low, high);
-		quick_sort_recursive(array, size, low, i - 1);
-		quick_sort_recursive(array, size, i - 1, high);
+		int i = lomuto_tri(array, low, high, size);
+
+		quick_sort_recursive(array, low, i - 1, size);
+		quick_sort_recursive(array, i + 1, high, size);
 	}
 }
 
@@ -67,5 +68,5 @@ void quick_sort(int *array, size_t size)
 	{
 		return;
 	}
-	quick_sort_recursive(array, size, 0, size - 1);
+	quick_sort_recursive(array, 0, size - 1, size);
 }
