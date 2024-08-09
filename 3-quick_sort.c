@@ -1,12 +1,12 @@
 #include "sort.h"
 
 /**
-*lomuto_tri - sort
+*lomuto_tri - sorts an array of integers in ascending order
 * @array: array to sort
 * @size: size of the array to sort
 * @low: first part of the array separated by pivot
 * @high: second part of the array separated by pivot
-* Return:
+* Return: an integer
 */
 int lomuto_tri(int *array, int low, int high, size_t size)
 {
@@ -43,7 +43,11 @@ int lomuto_tri(int *array, int low, int high, size_t size)
 }
 
 /**
-* quick_sort_recursive -
+* quick_sort_recursive - sorts an array of integers in ascending order
+* @array: array to sort
+* @size: size of the array to sort
+* @low: first part of the array separated by pivot
+* @high: second part of the array separated by pivot
 */
 void quick_sort_recursive(int *array, int low, int high, size_t size)
 {
@@ -64,7 +68,7 @@ void quick_sort_recursive(int *array, int low, int high, size_t size)
  */
 void quick_sort(int *array, size_t size)
 {
-	if (array == NULL || size <= 2)
+	if (array == NULL || size < 2)
 	{
 		return;
 	}
